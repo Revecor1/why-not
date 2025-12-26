@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16
+    container_name: why_not_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: why_not
+    ports:
+      - "5432:5432"
+    volumes:
+      - why_not_db:/var/lib/postgresql/data
+
+volumes:
+  why_not_db:

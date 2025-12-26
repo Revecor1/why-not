@@ -1,0 +1,13 @@
+{
+  "name": "why-not",
+  "private": true,
+  "workspaces": ["apps/*"],
+  "scripts": {
+    "dev": "concurrently -n API,WEB -c auto \"npm run dev -w api\" \"npm run dev -w web\"",
+    "dev:api": "npm run dev -w api",
+    "dev:web": "npm run dev -w web"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
