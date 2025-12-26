@@ -13,8 +13,8 @@ export default async function NewsPage() {
   return (
     <div className="space-y-6">
       <div className="card rounded-2xl p-6">
-        <h1 className="text-2xl font-semibold">News</h1>
-        <p className="mt-2 text-white/70">Updates and announcements.</p>
+        <h1 className="text-2xl font-semibold">Новости</h1>
+        <p className="mt-2 text-white/70">Нововедения и объявления</p>
       </div>
 
       <div className="space-y-3">

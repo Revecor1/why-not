@@ -38,15 +38,15 @@ export default function MyOrdersPage() {
   return (
     <div className="space-y-6">
       <div className="card rounded-2xl p-6">
-        <h1 className="text-2xl font-semibold">My orders</h1>
-        <p className="mt-2 text-white/70">History of your orders.</p>
+        <h1 className="text-2xl font-semibold">Мои заказы</h1>
+        <p className="mt-2 text-white/70">История заказов.</p>
       </div>
 
       {error && (
         <div className="card rounded-2xl p-6">
-          <div className="text-white/80">Error: {error}</div>
+          <div className="text-white/80">Ошибка: {error}</div>
           <div className="mt-2 text-sm text-white/60">
-            Please <Link className="underline" href="/account">login</Link> to view your orders.
+            Введите <Link className="underline" href="/account">Логин</Link> чтобы просмотреть ваши заказы.
           </div>
         </div>
       )}
@@ -82,7 +82,7 @@ export default function MyOrdersPage() {
 
       {!error && orders.length === 0 && (
         <div className="card rounded-2xl p-6 text-white/70">
-          No orders yet. Go to <Link className="underline" href="/cart">Cart</Link>.
+          Нету заказов, перейдите в <Link className="underline" href="/cart">Корзину</Link>.
         </div>
       )}
     </div>

@@ -22,7 +22,7 @@ export default async function Page() {
     
     <div className="space-y-8">
       <section className="card rounded-2xl p-6">
-        <h1 className="text-2xl font-semibold">Menu</h1>
+        <h1 className="text-2xl font-semibold">Меню</h1>
         <p className="mt-2 text-white/70"></p>
       </section>
 
@@ -30,7 +30,7 @@ export default async function Page() {
         <section key={cat} className="space-y-3">
           <div className="flex items-end justify-between">
             <h2 className="text-lg font-semibold">{cat}</h2>
-            <div className="text-sm text-white/60">{items.length} items</div>
+            <div className="text-sm text-white/60">{items.length} Описание</div>
           </div>
 
           <div className="grid gap-3 sm:grid-cols-2">

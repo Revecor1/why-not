@@ -55,7 +55,7 @@ export default function AccountPage() {
   return (
     <div className="grid gap-6 md:grid-cols-2">
       <section className="card rounded-2xl p-6">
-        <h1 className="text-2xl font-semibold">Account</h1>
+        <h1 className="text-2xl font-semibold">Аккаунт</h1>
         <p className="mt-2 text-white/70">Auth via HttpOnly cookie.</p>
 
         <div className="mt-6 space-y-3 text-sm text-white/80">
@@ -70,21 +70,21 @@ export default function AccountPage() {
 
           {me ? (
             <div className="rounded-xl bg-white/5 p-4">
-              <div className="font-semibold">You are logged in</div>
+              <div className="font-semibold">Вы авторизованны</div>
               <div className="mt-2 text-white/70">
-                <div>Email: {me.email}</div>
-                <div>Role: {me.role}</div>
+                <div>Почта: {me.email}</div>
+                <div>Роль: {me.role}</div>
               </div>
               <button
                 onClick={logout}
                 disabled={busy}
                 className="btn mt-4 rounded-xl px-4 py-2 text-sm hover:bg-white/15"
               >
-                Logout
+                Выход
               </button>
             </div>
           ) : (
-            <div className="rounded-xl bg-white/5 p-4 text-white/70">Not authenticated.</div>
+            <div className="rounded-xl bg-white/5 p-4 text-white/70">Нет авторизации</div>
           )}
         </div>
       </section>
@@ -102,7 +102,7 @@ export default function AccountPage() {
 
         <div className="mt-5 space-y-3">
           <label className="block">
-            <div className="mb-1 text-sm text-white/70">Email</div>
+            <div className="mb-1 text-sm text-white/70">Почта</div>
             <input
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -111,7 +111,7 @@ export default function AccountPage() {
           </label>
 
           <label className="block">
-            <div className="mb-1 text-sm text-white/70">Password</div>
+            <div className="mb-1 text-sm text-white/70">Пароль</div>
             <input
               value={password}
               onChange={(e) => setPassword(e.target.value)}

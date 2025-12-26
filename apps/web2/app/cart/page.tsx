@@ -95,32 +95,32 @@ export default function CartPage() {
   return (
     <div className="space-y-6">
       <div className="card rounded-2xl p-6">
-        <h1 className="text-2xl font-semibold">Cart</h1>
-        <p className="mt-2 text-white/70">Select items and place an order.</p>
+        <h1 className="text-2xl font-semibold">Корзина</h1>
+        <p className="mt-2 text-white/70">Выберите товары и оформите заказ.</p>
       </div>
 
       {error && (
         <div className="card rounded-2xl p-6">
           <div className="text-white/80">Error: {error}</div>
           <div className="mt-2 text-sm text-white/60">
-            If you see “Unauthorized”, please <Link className="underline" href="/account">login</Link>.
+            Просим вас авторизоваться <Link className="underline" href="/account">Логин</Link>.
           </div>
         </div>
       )}
 
       {order && (
         <div className="card rounded-2xl p-6">
-          <div className="text-lg font-semibold">Order created</div>
+          <div className="text-lg font-semibold">Заказ создан!</div>
           <div className="mt-2 text-white/70">
             ID: <span className="font-mono">{order.id}</span>
           </div>
-          <div className="mt-1 text-white/70">Status: {order.status}</div>
+          <div className="mt-1 text-white/70">Статус: {order.status}</div>
         </div>
       )}
 
       <div className="card rounded-2xl p-6">
         {items.length === 0 ? (
-          <div className="text-white/70">Cart is empty. Go to <Link className="underline" href="/">Menu</Link>.</div>
+          <div className="text-white/70">Корзина пуста, зайдите в <Link className="underline" href="/">Меню</Link>.</div>
         ) : (
           <div className="space-y-4">
             {items.map((it) => (
@@ -145,7 +145,7 @@ export default function CartPage() {
             ))}
 
             <div className="flex items-center justify-between pt-2">
-              <div className="text-white/70">Total</div>
+              <div className="text-white/70">Общая стоимость:</div>
               <div className="text-xl font-semibold">{(total / 100).toFixed(2)}</div>
             </div>
 
@@ -154,7 +154,7 @@ export default function CartPage() {
                 {busy ? "Placing..." : "Place order"}
               </button>
               <button className="btn rounded-xl px-4 py-2 text-sm hover:bg-white/15" onClick={clear} disabled={busy}>
-                Clear
+                Очистить
               </button>
             </div>
           </div>

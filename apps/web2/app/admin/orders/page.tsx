@@ -49,19 +49,19 @@ export default function AdminOrdersPage() {
     <div className="space-y-6">
       <div className="card rounded-2xl p-6">
         <div className="flex items-center justify-between">
-          <h1 className="text-2xl font-semibold">Admin · Orders</h1>
+          <h1 className="text-2xl font-semibold">Админ · заказы</h1>
           <Link className="text-sm text-white/70 underline" href="/admin">
-            Back to Admin
+           Вернуться к администратору
           </Link>
         </div>
-        <p className="mt-2 text-white/70">Manage order statuses.</p>
+        <p className="mt-2 text-white/70">Управляйте статусами заказов.</p>
       </div>
 
       {error && (
         <div className="card rounded-2xl p-6">
-          <div className="text-white/80">Error: {error}</div>
+          <div className="text-white/80">Ошибка: {error}</div>
           <div className="mt-2 text-sm text-white/60">
-            Login as <Link className="underline" href="/account">admin@test.com</Link>.
+            Авторизуйтесь под <Link className="underline" href="/account">admin@test.com</Link>.
           </div>
         </div>
       )}
@@ -69,7 +69,7 @@ export default function AdminOrdersPage() {
       {!error && (
         <div className="card rounded-2xl p-6">
           {orders.length === 0 ? (
-            <div className="text-white/70">No orders yet.</div>
+            <div className="text-white/70">Нету заказов</div>
           ) : (
             <div className="space-y-4">
               {orders.map((o) => (
